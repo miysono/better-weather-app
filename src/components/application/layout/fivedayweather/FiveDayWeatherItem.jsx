@@ -2,7 +2,6 @@ import { useLayoutContext } from "../../../../hooks/useLayoutContext";
 
 export default function FiveDayWeatherItem({ weatherData, index }) {
   const { setDetailedView } = useLayoutContext();
-  console.log(weatherData);
   return (
     <div
       className="p-2 cursor-pointer hover:bg-blue-400 hover:text-gray-800"
@@ -17,7 +16,7 @@ export default function FiveDayWeatherItem({ weatherData, index }) {
       />
       <p className="text-center">
         {Math.floor(weatherData.main.temp)}
-        *C
+        °C
       </p>
     </div>
   );

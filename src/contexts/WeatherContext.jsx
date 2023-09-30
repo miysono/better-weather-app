@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useReducer } from "react";
+import { createContext, useCallback, useReducer } from "react";
 
 const BASE_LOCATION_URL =
   "https://api.bigdatacloud.net/data/reverse-geocode-client";
@@ -62,6 +62,7 @@ function WeatherProvider({ children }) {
       const res = await fetch(
         `${BASE_REALTIME_URL}?lat=${lat}&lon=${lng}&appid=${WEATHER_KEY}&units=metric`
       );
+      if (!res.ok) throw new Error("Failed to load data. Please try again!");
       const data = await res.json();
       dispatch({ type: "REALTIME_DATA_LOADED", payload: data });
     } catch (err) {
@@ -75,6 +76,7 @@ function WeatherProvider({ children }) {
       const res = await fetch(
         `${BASE_FIVEDAY_URL}?lat=${lat}&lon=${lng}&appid=${WEATHER_KEY}&units=metric`
       );
+      if (!res.ok) throw new Error("Failed to load data. Please try again!");
       const data = await res.json();
       dispatch({ type: "FIVEDAY_DATA_LOADED", payload: data });
     } catch (err) {
@@ -88,6 +90,7 @@ function WeatherProvider({ children }) {
       const res = await fetch(
         `${BASE_LOCATION_URL}?latitude=${lat}&longitude=${lng}`
       );
+      if (!res.ok) throw new Error("Failed to load data. Please try again!");
       const data = await res.json();
       dispatch({ type: "REGION_LOADED", payload: data });
     } catch (err) {

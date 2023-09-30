@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { useLayoutContext } from "../../../hooks/useLayoutContext";
 
-export default function WeatherDataComponent({
-  regionData,
-  weatherData,
-  time = "Now",
-}) {
+export default function WeatherDataComponent({ regionData, weatherData }) {
   const [showViewMore, setShowViewMore] = useState(false);
   const { setDetailedView } = useLayoutContext();
   return (
@@ -22,14 +18,13 @@ export default function WeatherDataComponent({
               Back
             </button>
           )}
-          <div className="flex items-center justify-center flex-col ">
-            <p className="mb-5">{time}</p>
-            <h2 className="text-xl">{regionData.principalSubdivision}</h2>
+          <div className="flex items-center justify-center flex-col mb">
+            <h2 className="text-xl mt-5">{regionData.principalSubdivision}</h2>
             <h1 className="font-semibold text-3xl mb-5">
               {regionData.locality}
             </h1>
             <img
-              src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${weatherData?.weather[0]?.icon}@2x.png`}
               className="p-5 w-40 mb-5"
             />
             <h6 className="text-2xl mb-2.5">
