@@ -6,9 +6,9 @@ import Pricing from "./pages/Pricing";
 import AboutUs from "./pages/AboutUs";
 import Login from "./pages/Login";
 import Application from "./pages/Application";
-import WeatherContainer from "./components/application/layout/WeatherContainer";
-import FiveDayWeatherContainer from "./components/application/layout/FiveDayWeatherContainer";
-import SavedWeatherContainer from "./components/application/layout/SavedWeatherContainer";
+import WeatherContainer from "./components/application/layout/realtimeweather/WeatherContainer";
+import FiveDayWeatherContainer from "./components/application/layout/fivedayweather/FiveDayWeatherContainer";
+import SavedWeatherContainer from "./components/application/layout/savedweather/SavedWeatherContainer";
 import PageNotFound from "./pages/PageNotFound";
 import { WeatherProvider } from "./contexts/WeatherContext";
 

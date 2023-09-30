@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { useUrlPosition } from "../../../hooks/useUrlPosition";
-import { useWeatherContext } from "../../../hooks/useWeatherContext";
-import Spinner from "./Spinner";
-import LayoutIntro from "./LayoutIntro";
-import LayoutError from "./LayoutError";
+import { useUrlPosition } from "../../../../hooks/useUrlPosition";
+import { useWeatherContext } from "../../../../hooks/useWeatherContext";
+import Spinner from "../Spinner";
+import LayoutIntro from "../LayoutIntro";
+import LayoutError from "../LayoutError";
 import FiveDayWeatherList from "./FiveDayWeatherList";
 import FiveDayWeatherItem from "./FiveDayWeatherItem";
 import FiveDayWeatherHeader from "./FiveDayWeatherHeader";
-import WeatherDataComponent from "./WeatherDataComponent";
+import WeatherDataComponent from "../WeatherDataComponent";
 
 export default function FiveDayWeatherContainer() {
   const [detailedView, setDetailedView] = useState({
@@ -37,7 +37,7 @@ export default function FiveDayWeatherContainer() {
     [lat, lng, fetchCityAndRegionName, fetchFiveDayWeather]
   );
 
-  if (weatherData === null) return <LayoutIntro />;
+  if (weatherData === null && !isLoading) return <LayoutIntro />;
   if (fetchError) return <LayoutError />;
   if (isLoading) return <Spinner />;
 

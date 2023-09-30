@@ -43,7 +43,7 @@ const reducer = (state, action) => {
 };
 
 const initialState = {
-  isLoading: true,
+  isLoading: false,
   realtimeWeatherData: null,
   fiveDayWeatherData: null,
   regionData: null,

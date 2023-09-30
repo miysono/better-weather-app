@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { useUrlPosition } from "../../../hooks/useUrlPosition";
-import { useWeatherContext } from "../../../hooks/useWeatherContext";
+import { useUrlPosition } from "../../../../hooks/useUrlPosition";
+import { useWeatherContext } from "../../../../hooks/useWeatherContext";
 
-import Spinner from "./Spinner";
-import LayoutIntro from "./LayoutIntro";
-import LayoutError from "./LayoutError";
-import WeatherDataComponent from "./WeatherDataComponent";
+import Spinner from "../Spinner";
+import LayoutIntro from "../LayoutIntro";
+import LayoutError from "../LayoutError";
+import WeatherDataComponent from "../WeatherDataComponent";
 
 export default function WeatherContainer() {
   const [lat, lng] = useUrlPosition();
@@ -22,8 +22,10 @@ export default function WeatherContainer() {
   useEffect(
     function () {
       async function getData() {
+        console.log(isLoading);
         if (!lat && !lng) return;
         await fetchCityAndRegionName(lat, lng);
+        console.log(isLoading);
         await fetchRealtimeWeather(lat, lng);
       }
       getData();
@@ -31,7 +33,7 @@ export default function WeatherContainer() {
     [lat, lng, fetchCityAndRegionName, fetchRealtimeWeather]
   );
 
-  if (weatherData === null) return <LayoutIntro />;
+  if (weatherData === null && !isLoading) return <LayoutIntro />;
   if (isLoading) return <Spinner />;
   if (fetchError) return <LayoutError error={fetchError} />;
 
