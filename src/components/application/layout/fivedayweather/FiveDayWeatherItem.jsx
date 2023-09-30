@@ -2,6 +2,7 @@ import { useLayoutContext } from "../../../../hooks/useLayoutContext";
 
 export default function FiveDayWeatherItem({ weatherData, index }) {
   const { setDetailedView } = useLayoutContext();
+  console.log(weatherData);
   return (
     <div
       className="p-2 cursor-pointer hover:bg-blue-400 hover:text-gray-800"
@@ -10,7 +11,10 @@ export default function FiveDayWeatherItem({ weatherData, index }) {
       }}
     >
       <p>{weatherData.dt_txt.slice(10, 16)}</p>
-      <img src="/about-test.svg" alt="" />
+      <img
+        src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+        alt=""
+      />
       <p className="text-center">
         {Math.floor(weatherData.main.temp)}
         *C
