@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
+import { useLayoutContext } from "../../hooks/useLayoutContext";
 
-export default function ApplicationMap({ setIsLayoutOpen }) {
+export default function ApplicationMap() {
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
   return (
@@ -17,13 +18,14 @@ export default function ApplicationMap({ setIsLayoutOpen }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <DetectClick setIsLayoutOpen={setIsLayoutOpen} />
+        <DetectClick />
       </MapContainer>
     </div>
   );
 }
 
-function DetectClick({ setIsLayoutOpen }) {
+function DetectClick() {
+  const { setIsLayoutOpen } = useLayoutContext();
   const navigate = useNavigate();
   useMapEvents({
     click: (e) => {

@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react";
-import { useUrlPosition } from "../hooks/useUrlPosition";
+import { useState } from "react";
 
 import ApplicationOverlay from "../components/application/overlay/ApplicationOverlay";
 import ApplicationLayout from "../components/application/ApplicationLayout";
 import ApplicationMap from "../components/application/ApplicationMap";
 
 export default function Application() {
-  const [isLayoutOpen, setIsLayoutOpen] = useState(true);
-
   return (
     <div className="h-screen">
       {/* Layout */}
-      <ApplicationLayout isLayoutOpen={isLayoutOpen} />
+      <ApplicationLayout />
 
       {/* Map */}
-      <ApplicationMap setIsLayoutOpen={setIsLayoutOpen} />
+      <ApplicationMap />
 
       {/* Overlay */}
       <ApplicationOverlay />

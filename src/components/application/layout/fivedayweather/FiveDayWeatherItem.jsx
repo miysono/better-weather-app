@@ -1,8 +1,7 @@
-export default function FiveDayWeatherItem({
-  weatherData,
-  setDetailedView,
-  index,
-}) {
+import { useLayoutContext } from "../../../../hooks/useLayoutContext";
+
+export default function FiveDayWeatherItem({ weatherData, index }) {
+  const { setDetailedView } = useLayoutContext();
   return (
     <div
       className="p-2 cursor-pointer hover:bg-blue-400 hover:text-gray-800"

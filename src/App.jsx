@@ -1,4 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { WeatherProvider } from "./contexts/WeatherContext";
+import { LayoutProvider } from "./contexts/LayoutContext";
 
 import Homepage from "./pages/Homepage";
 import Forecasts from "./pages/Forecasts";
@@ -10,27 +12,28 @@ import WeatherContainer from "./components/application/layout/realtimeweather/We
 import FiveDayWeatherContainer from "./components/application/layout/fivedayweather/FiveDayWeatherContainer";
 import SavedWeatherContainer from "./components/application/layout/savedweather/SavedWeatherContainer";
 import PageNotFound from "./pages/PageNotFound";
-import { WeatherProvider } from "./contexts/WeatherContext";
 
 function App() {
   return (
     <WeatherProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="forecasts" element={<Forecasts />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="about-us" element={<AboutUs />} />
-          <Route path="login" element={<Login />} />
-          <Route path="app" element={<Application />}>
-            <Route index element={<Navigate replace to="realtime" />} />
-            <Route path="realtime" element={<WeatherContainer />} />
-            <Route path="5day" element={<FiveDayWeatherContainer />} />
-            <Route path="saved" element={<SavedWeatherContainer />} />
-          </Route>
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <LayoutProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Homepage />} />
+            <Route path="forecasts" element={<Forecasts />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="login" element={<Login />} />
+            <Route path="app" element={<Application />}>
+              <Route index element={<Navigate replace to="realtime" />} />
+              <Route path="realtime" element={<WeatherContainer />} />
+              <Route path="5day" element={<FiveDayWeatherContainer />} />
+              <Route path="saved" element={<SavedWeatherContainer />} />
+            </Route>
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </LayoutProvider>
     </WeatherProvider>
   );
 }

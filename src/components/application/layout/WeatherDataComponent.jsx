@@ -1,13 +1,13 @@
 import { useState } from "react";
+import { useLayoutContext } from "../../../hooks/useLayoutContext";
 
 export default function WeatherDataComponent({
   regionData,
   weatherData,
   time = "Now",
-  setDetailedView = null,
 }) {
   const [showViewMore, setShowViewMore] = useState(false);
-  console.log(weatherData);
+  const { setDetailedView } = useLayoutContext();
   return (
     <div className=" bg-blue-400 mt-10 max-w-full w-96 mx-auto my-auto rounded-xl text-gray-800 p-5">
       {!showViewMore && (

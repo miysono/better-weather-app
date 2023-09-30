@@ -5,9 +5,9 @@ import LayoutForecastOption from "./layout/LayoutForecastOption";
 
 import { Outlet } from "react-router-dom";
 
-export default function ApplicationLayout({ isLayoutOpen }) {
+export default function ApplicationLayout() {
   return (
-    <LayoutBody isLayoutOpen={isLayoutOpen}>
+    <LayoutBody>
       {/* Layout header */}
       <LayoutHeader />
       {/* Forecast options */}
