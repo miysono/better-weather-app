@@ -8,7 +8,7 @@ export default function Sun() {
       <img
         src={sunImage}
         alt=""
-        className="absolute h-96 -top-80 right-40 animate-spin-slow -mt-40 -z-0 "
+        className="absolute h-40 right-10 top-0 lg:h-96 lg:-top-80 lg:right-40 animate-spin-slow -mt-40 -z-0 "
       />
     </Parallax>
   );

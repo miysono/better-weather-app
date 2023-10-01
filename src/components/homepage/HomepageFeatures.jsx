@@ -1,12 +1,12 @@
 export default function HomepageFeatures() {
   return (
-    <section className="h-screen relative bg-gray-300">
+    <section className=" relative bg-gray-300">
       <div className="flex items-center align-center justify-center flex-col">
         <h1 className="font-semibold text-3xl mt-20 tracking-wider lg:text-5xl">
           <span className="text-blue-400">Easy</span> to use!
         </h1>
 
-        <div className="mt-20 lg:w-2/3">
+        <div className="my-20 lg:w-2/3">
           <div className="p-5 flex items-center justify-center gap-5">
             <p className="lg:w-96 lg:text-xl">
               Cloudtinum is not only a weather app that takes you on captivating
@@ -16,7 +16,7 @@ export default function HomepageFeatures() {
             </p>
             <img src="weather-img-2.svg" className="w-32 lg:w-72" />
           </div>
-          <div className="mt-10 flex align-center items-center justify-center gap-5">
+          <div className="p-5 mt-10 flex align-center items-center justify-center gap-5">
             <img src="weather-img-3.svg" className="w-32 lg:w-72" />
             <p className="lg:w-96 lg:text-xl">
               With a clean and intuitive interface, Cloudtinum lets you

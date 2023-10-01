@@ -7,7 +7,7 @@ export default function HomepageDescription() {
   const { ref, inView } = useInView({ threshold: 0 });
   return (
     <section
-      className={`relative h-screen duration-500 ${
+      className={`relative duration-500 ${
         inView ? "opacity-100" : "opacity-0  translate-y-20"
       }`}
       ref={ref}

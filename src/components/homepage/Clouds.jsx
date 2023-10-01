@@ -3,12 +3,12 @@ import { Parallax } from "react-scroll-parallax";
 import cloudSVG from "/clouds.svg";
 import invertedCloudSVG from "/cloud-inverted.svg";
 
-export default function Clouds({ inverted }) {
+export default function Clouds({ inverted, className }) {
   const cloudImage = inverted ? invertedCloudSVG : cloudSVG;
 
   return (
     <Parallax translateX={[10, 0]}>
-      <div className={`${!inverted && "-mt-60"}`}>
+      <div className={className}>
         <img
           src={cloudImage}
           alt=""

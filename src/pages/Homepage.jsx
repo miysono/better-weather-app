@@ -20,7 +20,7 @@ function Homepage() {
         <HomepageIntro />
 
         {/* CLOUDS */}
-        <Clouds />
+        <Clouds className={"-mt-60"} />
         <Clouds inverted={true} />
 
         {/* SECTION 2 */}
