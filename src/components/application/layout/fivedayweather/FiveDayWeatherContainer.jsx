@@ -15,14 +15,15 @@ export default function FiveDayWeatherContainer() {
   const [lat, lng] = useUrlPosition();
   const {
     error: fetchError,
-    isLoading,
-    regionData,
     fiveDayWeatherData: weatherData,
+    isLoading,
     fetchCityAndRegionName,
     fetchFiveDayWeather,
   } = useWeatherContext();
 
-  console.log(weatherData);
+  const totalWeatherOptions = 40;
+  const weatherOptionsPerDay = 8;
+
   useEffect(
     function () {
       async function getData() {
@@ -42,17 +43,13 @@ export default function FiveDayWeatherContainer() {
   if (!detailedView.isDetailed)
     return (
       <div className="p-5 mb-5">
-        <FiveDayWeatherHeader regionData={regionData} />
-        {Array.from({ length: 40 }, (_, i) => {
+        <FiveDayWeatherHeader />
+        {Array.from({ length: totalWeatherOptions }, (_, i) => {
           if (i % 8 === 0)
             return (
               <FiveDayWeatherList key={_} date={i / 8 + 1}>
-                {Array.from({ length: 8 }, (_, index) => (
-                  <FiveDayWeatherItem
-                    weatherData={weatherData.list[i + index]}
-                    key={index + i}
-                    index={i + index}
-                  />
+                {Array.from({ length: weatherOptionsPerDay }, (_, index) => (
+                  <FiveDayWeatherItem key={index + i} index={i + index} />
                 ))}
               </FiveDayWeatherList>
             );
@@ -60,9 +57,6 @@ export default function FiveDayWeatherContainer() {
       </div>
     );
   return (
-    <WeatherDataComponent
-      regionData={regionData}
-      weatherData={weatherData.list[detailedView.index]}
-    />
+    <WeatherDataComponent weatherData={weatherData.list[detailedView.index]} />
   );
 }

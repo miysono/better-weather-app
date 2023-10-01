@@ -13,7 +13,6 @@ export default function WeatherContainer() {
   const {
     error: fetchError,
     isLoading,
-    regionData,
     realtimeWeatherData: weatherData,
     fetchCityAndRegionName,
     fetchRealtimeWeather,
@@ -22,10 +21,8 @@ export default function WeatherContainer() {
   useEffect(
     function () {
       async function getData() {
-        console.log(isLoading);
         if (!lat && !lng) return;
         await fetchCityAndRegionName(lat, lng);
-        console.log(isLoading);
         await fetchRealtimeWeather(lat, lng);
       }
       getData();
@@ -37,7 +34,5 @@ export default function WeatherContainer() {
   if (isLoading) return <Spinner />;
   if (fetchError) return <LayoutError error={fetchError} />;
 
-  return (
-    <WeatherDataComponent weatherData={weatherData} regionData={regionData} />
-  );
+  return <WeatherDataComponent weatherData={weatherData} />;
 }

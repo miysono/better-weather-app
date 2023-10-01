@@ -9,7 +9,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen  bg-gray-800">
+    <div className="min-h-screen bg-gray-800">
       <Navbar bg="bg-gray-800" textColor="text-blue-400" logoBlue={true} />
       <div className="relative w-scre">
         <div className="flex flex-col max-w-lg  rounded-2xl p-10 w-full bg-gray-800 text-blue-400 mx-auto mt-20">

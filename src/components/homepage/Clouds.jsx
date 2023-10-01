@@ -12,7 +12,7 @@ export default function Clouds({ inverted }) {
         <img
           src={cloudImage}
           alt=""
-          className={`relative h-auto w-full scale-x-125 ${
+          className={`relative h-52 w-full scale-x-150 lg:scale-x-125 lg:h-auto ${
             inverted && "rotate-180"
           }`}
         />

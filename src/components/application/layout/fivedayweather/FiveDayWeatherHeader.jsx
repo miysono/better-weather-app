@@ -1,4 +1,7 @@
-export default function FiveDayWeatherHeader({ regionData }) {
+import { useWeatherContext } from "../../../../hooks/useWeatherContext";
+
+export default function FiveDayWeatherHeader() {
+  const { regionData } = useWeatherContext();
   return (
     <div className="text-center mt-2.5">
       <h1 className="text-xl">{regionData.principalSubdivision}</h1>

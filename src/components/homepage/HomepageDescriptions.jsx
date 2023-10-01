@@ -18,45 +18,42 @@ export default function HomepageDescription() {
           <img src="./public/particles.svg" className="absolute opacity-50" />
         </Parallax>
 
-        <div className=" flex items-center align-center flex-col justify-center z-50">
+        <div className="mt-10 flex items-center align-center flex-col justify-center z-50">
           <h1
-            className={`text-5xl text-gray-800 
-                tracking-wider`}
+            className={`font-semibold text-xl text-gray-800 
+                tracking-wider lg:text-5xl`}
           >
-            <strong>
-              Your Athmospheric{" "}
-              <span
-                className={` duration-700 ${
-                  inView ? "text-blue-500" : "text-gray-800"
-                }`}
-              >
-                Adventure
-              </span>
-            </strong>
+            Your Athmospheric{" "}
+            <span
+              className={` duration-700 ${
+                inView ? "text-blue-500" : "text-gray-800"
+              }`}
+            >
+              Adventure
+            </span>
           </h1>
-          <div className="mt-16 w-2/3 h-full">
-            <div className="p-5 flex justify-center gap-10">
-              <p className=" text-2xl w-96 text-ellipsis">
+          <div className="mt-20 lg:mt-16 lg:w-2/3">
+            <div className="p-5 gap-5 flex justify-center lg:gap-10">
+              <p className=" lg:text-2xl lg:w-96">
                 Imagine a weather app that&apos;s not just about forecasts, but
                 a portal to the atmospheric wonders of the world.
               </p>
-              <img src="weather-img-1.svg" className="w-96" />
+              <img src="weather-img-1.svg" className="w-32 lg:w-96" />
             </div>
           </div>
-          <div className="flex justify-center mt-5 flex-col items-center relative">
-            <h1 className="text-2xl w-2/3 text-center ">
-              <strong>
-                Step into a digital meteorological masterpiece that paints the
-                sky on your screen. With a single tap, it conjures up the very
-                essence of weather, transforming your device into a window to
-                the cosmos.
-              </strong>
+          <div className="p-5 flex justify-center mt-5 flex-col items-center relative">
+            <h1 className="font-semibold lg:text-2xl lg:w-2/3 lg:text-center ">
+              Step into a digital meteorological masterpiece that paints the sky
+              on your screen. With a single tap, it conjures up the very essence
+              of weather, transforming your device into a window to the cosmos.
             </h1>
-            <div className="mt-5 relative">
+            <div className="mt-20 relative lg:mt-5">
               <NavLink to="/login">
                 <div className=" hover:bg-blue-500 border-blue-500 border-2 rounded-xl relative">
                   <Button>
-                    <p className="text-2xl p-5">Register now!</p>
+                    <p className="p-5 font-semibold lg:text-2xl">
+                      Register now!
+                    </p>
                   </Button>
                 </div>
               </NavLink>
