@@ -1,6 +1,6 @@
-import ApplicationOverlay from "../components/application/overlay/ApplicationOverlay";
-import ApplicationLayout from "../components/application/ApplicationLayout";
-import ApplicationMap from "../components/application/ApplicationMap";
+import ApplicationOverlay from "./overlay/ApplicationOverlay";
+import ApplicationLayout from "./ApplicationLayout";
+import ApplicationMap from "./ApplicationMap";
 
 export default function Application() {
   return (

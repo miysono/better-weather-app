@@ -1,32 +1,40 @@
 import { Link } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Button from "../components/Button";
-import AboutUsBody from "../components/aboutus/AboutUsBody";
-import AboutUsContainer from "../components/aboutus/AboutUsContainer";
-import AboutUsIntro from "../components/aboutus/AboutUsIntro";
-import AboutUsTitle from "../components/aboutus/AboutUsTitle";
-import AboutUsSubtitle from "../components/aboutus/AboutUsSubtitle";
-import AboutUsSectionContainer from "../components/aboutus/AboutUsSectionContainer";
+import Navbar from "/src/layouts/Navbar";
+import Footer from "/src/layouts/Footer";
+import Button from "/src/components/Button";
+import PageBody from "/src/components/PageBody";
+import PageHeader from "/src/components/PageHeader";
+import PageContentCard from "/src/components/PageContentCard";
+
+import AboutUsSubtitle from "./components/AboutUsSubtitle";
 
 export default function AboutUs() {
   return (
     <>
       <Navbar />
-      <AboutUsBody>
+      <PageBody>
         {/* Title */}
-        <AboutUsTitle />
+        <PageHeader title={"Who are we?"} subtitle={"About us"} />
 
         {/* Body */}
-        <AboutUsContainer>
-          {/* Paragraph 1 */}
-          <AboutUsIntro />
+        <div className="relative px-5 flex justify-center items-center flex-col">
+          {/* Content Card 1 */}
+          <PageContentCard
+            imgSrc="/about-us-1.svg"
+            textContent="Cloudtinum was born from a
+        shared passion for weather and a vision to create an exceptional weather
+        app that goes beyond the ordinary. Our dedicated team of meteorologists,
+        designers, and developers came together with one goal in mind: to
+        provide users with a weather experience that is both informative and
+        captivating."
+          />
 
           {/* Subtitle */}
           <AboutUsSubtitle subtitle="Our mission" />
-          {/* Paragraph 2 */}
-          <AboutUsSectionContainer
+
+          {/* Content Card 2*/}
+          <PageContentCard
             imgSrc="/about-us-2.svg"
             textContent="At
               Cloudtinum, we see
@@ -39,14 +47,15 @@ export default function AboutUs() {
 
           {/* Subtitle */}
           <AboutUsSubtitle subtitle="Join our weather journey!" />
-          {/* Paragraph 3 */}
-          <AboutUsSectionContainer
+
+          {/* Content Card 3*/}
+          <PageContentCard
+            imgSrc="/about-us-3.svg"
             textContent="We invite you to join us on this weather journey. Cloudtinum is
               more than just an app. It's a community of weather
               enthusiasts, explorers, and nature lovers. Together, we'll
               continue to explore, learn, and appreciate the remarkable world of
               weather."
-            imgSrc="/about-us-3.svg"
           />
 
           {/* CTA */}
@@ -61,8 +70,8 @@ export default function AboutUs() {
               Get Started
             </Button>
           </Link>
-        </AboutUsContainer>
-      </AboutUsBody>
+        </div>
+      </PageBody>
       {/* Footer */}
       <Footer />
     </>

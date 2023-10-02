@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useUrlPosition } from "../../../../hooks/useUrlPosition";
 import { useWeatherContext } from "../../../../hooks/useWeatherContext";
 
-import Spinner from "../Spinner";
+import Spinner from "/src/components/Spinner";
 import LayoutIntro from "../LayoutIntro";
 import LayoutError from "../LayoutError";
 import WeatherDataComponent from "../WeatherDataComponent";

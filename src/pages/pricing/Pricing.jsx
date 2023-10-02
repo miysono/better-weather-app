@@ -1,17 +1,20 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import CardsContainer from "../components/pricing/CardsContainer";
-import PricingBody from "../components/pricing/PricingBody";
-import PricingTitle from "../components/pricing/PricingTItle";
-import PricingCard from "../components/pricing/PricingCard";
-import PricingFeatureList from "../components/pricing/PricingFeatureList";
+import Footer from "/src/layouts/Footer";
+import Navbar from "/src/layouts/Navbar";
+import PageHeader from "/src/components/PageHeader";
+import PageBody from "/src/components/PageBody";
+
+import CardsContainer from "./components/CardsContainer";
+import PricingCard from "./components/PricingCard";
+import PricingFeatureList from "./components/PricingFeatureList";
 
 export default function Pricing() {
   return (
     <>
+      {/* Navbar */}
       <Navbar />
-      <PricingBody>
-        <PricingTitle />
+      <PageBody>
+        {/* Header */}
+        <PageHeader title="Choose your best plan" subtitle="Pricing" />
         {/* Cards */}
         <CardsContainer>
           {/* Card 1 */}
@@ -62,7 +65,8 @@ export default function Pricing() {
             />
           </PricingCard>
         </CardsContainer>
-      </PricingBody>
+      </PageBody>
+      {/* Footer */}
       <Footer />
     </>
   );

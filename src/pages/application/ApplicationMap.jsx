@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useLayoutContext } from "../../hooks/useLayoutContext";
 
 export default function ApplicationMap() {
-  const [mapPosition, setMapPosition] = useState([40, 0]);
+  const [mapPosition] = useState([40, 0]);
 
   return (
     <div className="z-0 w-full h-full absolute">

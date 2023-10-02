@@ -14,7 +14,7 @@ export default function HomepageDescription() {
       <div className="-z-20">
         {/* {particles} */}
         <Parallax speed={30}>
-          <img src="./public/particles.svg" className="absolute opacity-50" />
+          <img src="/particles.svg" className="absolute opacity-50" />
         </Parallax>
 
         <div className="mt-10 flex items-center align-center flex-col justify-center z-50">

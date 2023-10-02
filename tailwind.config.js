@@ -2,66 +2,63 @@
 export default {
   content: [
     //PAGES
-    "./src/pages/AboutUs.jsx",
-    "./src/pages/Application.jsx",
-    "./src/pages/Forecasts.jsx",
-    "./src/pages/Homepage.jsx",
-    "./src/pages/Login.jsx",
-    "./src/pages/PageNotFound.jsx",
-    "./src/pages/Pricing.jsx",
+    "./src/pages/aboutus/AboutUs.jsx",
+    "./src/pages/application/Application.jsx",
+    "./src/pages/forecasts/Forecasts.jsx",
+    "./src/pages/homepage/Homepage.jsx",
+    "./src/pages/login/Login.jsx",
+    "./src/pages/pagenotfound/PageNotFound.jsx",
+    "./src/pages/pricing/Pricing.jsx",
 
-    //COMPONENTS
-    "./src/components/Button.jsx",
-    "./src/components/Footer.jsx",
-    "./src/components/Navbar.jsx",
-    //HOMEPAGE
-    "./src/components/homepage/Clouds.jsx",
-    "./src/components/homepage/HomepageBody.jsx",
-    "./src/components/homepage/HomepageDescriptions.jsx",
-    "./src/components/homepage/HomepageFeatures.jsx",
-    "./src/components/homepage/HomepageIntro.jsx",
-    "./src/components/homepage/Sun.jsx",
-    //PRICING
-    "./src/components/pricing/CardsContainer.jsx",
-    "./src/components/pricing/PricingBody.jsx",
-    "./src/components/pricing/PricingCard.jsx",
-    "./src/components/pricing/PricingFeature.jsx",
-    "./src/components/pricing/PricingFeatureList.jsx",
-    "./src/components/pricing/PricingTitle.jsx",
-    //ABOUTUS
-    "./src/components/aboutus/AboutUsBody.jsx",
-    "./src/components/aboutus/AboutUsContainer.jsx",
-    "./src/components/aboutus/AboutUsIntro.jsx",
-    "./src/components/aboutus/AboutUsSectionContainer.jsx",
-    "./src/components/aboutus/AboutUsSubtitle.jsx",
-    "./src/components/aboutus/AboutUsTitle.jsx",
-    //LOGIN
+    //ABOUTUS COMPONENTS
+    "./src/components/aboutus/components/AboutUsSubtitle.jsx",
 
-    //APPLICATION
-    //BASE
-    "./src/components/application/ApplicationLayout.jsx",
-    "./src/components/application/ApplicationMap.jsx",
+    //APPLICATION COMPONENTS
+    "./src/pages/application/ApplicationLayout.jsx",
+    "./src/pages/application/ApplicationMap.jsx",
 
     //LAYOUT
-    "./src/components/application/layout/LayoutBody.jsx",
-    "./src/components/application/layout/LayoutError.jsx",
-    "./src/components/application/layout/LayoutForecastOption.jsx",
-    "./src/components/application/layout/LayoutForecastOptions.jsx",
-    "./src/components/application/layout/LayoutHeader.jsx",
-    "./src/components/application/layout/LayoutIntro.jsx",
-    "./src/components/application/layout/Spinner.jsx",
-    "./src/components/application/layout/WeatherDataComponent.jsx",
+    "./src/pages/application/layout/LayoutBody.jsx",
+    "./src/pages/application/layout/LayoutError.jsx",
+    "./src/pages/application/layout/LayoutForecastOption.jsx",
+    "./src/pages/application/layout/LayoutForecastOptions.jsx",
+    "./src/pages/application/layout/LayoutHeader.jsx",
+    "./src/pages/application/layout/LayoutIntro.jsx",
+    "./src/pages/application/layout/Spinner.jsx",
+    "./src/pages/application/layout/WeatherDataComponent.jsx",
+    "./src/pages/application/layout/fivedayweather/FiveDayWeatherContainer.jsx",
+    "./src/pages/application/layout/fivedayweather/FiveDayWeatherHeader.jsx",
+    "./src/pages/application/layout/fivedayweather/FiveDayWeatherItem.jsx",
+    "./src/pages/application/layout/fivedayweather/FiveDayWeatherList.jsx",
+    "./src/pages/application/layout/realtime/WeatherContainer.jsx",
+    "./src/pages/application/layout/savedweather/SavedWeatherContainer.jsx",
+    "./src/pages/application/overlay/ApplicationOverlay.jsx",
 
-    "./src/components/application/layout/fivedayweather/FiveDayWeatherContainer.jsx",
-    "./src/components/application/layout/fivedayweather/FiveDayWeatherHeader.jsx",
-    "./src/components/application/layout/fivedayweather/FiveDayWeatherItem.jsx",
-    "./src/components/application/layout/fivedayweather/FiveDayWeatherList.jsx",
+    //HOMEPAGE
+    "./src/pages/homepage/components/Clouds.jsx",
+    "./src/pages/homepage/components/HomepageDescriptions.jsx",
+    "./src/pages/homepage/components/HomepageFeatures.jsx",
+    "./src/pages/homepage/components/HomepageIntro.jsx",
+    "./src/pages/homepage/components/Sun.jsx",
 
-    "./src/components/application/layout/realtime/WeatherContainer.jsx",
+    //PRICING
+    "./src/pages/pricing/components/CardsContainer.jsx",
+    "./src/pages/pricing/components/PricingBody.jsx",
+    "./src/pages/pricing/components/PricingCard.jsx",
+    "./src/pages/pricing/components/PricingFeature.jsx",
+    "./src/pages/pricing/components/PricingFeatureList.jsx",
+    "./src/pages/pricing/components/PricingTitle.jsx",
 
-    "./src/components/application/layout/savedweather/SavedWeatherContainer.jsx",
+    //Components
+    "./src/components/Button.jsx",
+    "./src/components/PageBody.jsx",
+    "./src/components/PageContentCard.jsx",
+    "./src/components/PageHeader.jsx",
+    "./src/components/Spinner.jsx",
 
-    "./src/components/application/overlay/ApplicationOverlay.jsx",
+    //Layout
+    "./src/layouts/Footer.jsx",
+    "./src/layouts/Navbar.jsx",
   ],
   theme: {
     extend: {

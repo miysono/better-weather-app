@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import Button from "./Button";
+import Button from "../components/Button";
 
 function Navbar({
   bg = "bg-blue-300",

@@ -2,16 +2,16 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { WeatherProvider } from "./contexts/WeatherContext";
 import { LayoutProvider } from "./contexts/LayoutContext";
 
-import Homepage from "./pages/Homepage";
-import Forecasts from "./pages/Forecasts";
-import Pricing from "./pages/Pricing";
-import AboutUs from "./pages/AboutUs";
-import Login from "./pages/Login";
-import Application from "./pages/Application";
-import WeatherContainer from "./components/application/layout/realtimeweather/WeatherContainer";
-import FiveDayWeatherContainer from "./components/application/layout/fivedayweather/FiveDayWeatherContainer";
-import SavedWeatherContainer from "./components/application/layout/savedweather/SavedWeatherContainer";
-import PageNotFound from "./pages/PageNotFound";
+import Homepage from "./pages/homepage/Homepage";
+import Forecasts from "./pages/forecasts/Forecasts";
+import Pricing from "./pages/pricing/Pricing";
+import AboutUs from "./pages/aboutus/AboutUs";
+import Login from "./pages/login/Login";
+import Application from "./pages/application/Application";
+import WeatherContainer from "./pages/application/layout/realtimeweather/WeatherContainer";
+import FiveDayWeatherContainer from "./pages/application/layout/fivedayweather/FiveDayWeatherContainer";
+import SavedWeatherContainer from "./pages/application/layout/savedweather/SavedWeatherContainer";
+import PageNotFound from "./pages/pagenotfound/PageNotFound";
 
 function App() {
   return (
