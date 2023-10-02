@@ -8,13 +8,13 @@ export default function PricingCard({
 }) {
   return (
     <div
-      className={`flex w-1/4 flex-col p-8 space-y-6 rounded-2xl shadow ${
+      className={`flex lg:w-1/4 flex-col p-10 m-5 space-y-5 rounded-2xl shadow lg:space-y-10 lg:m-0 ${
         active ? "bg-gray-800 scale-110 text-blue-400" : "bg-blue-400"
       }`}
     >
       <div className="space-y-2">
         <h4 className="text-2xl font-bold">{title}</h4>
-        <span className="text-6xl font-bold">
+        <span className="text-4xl font-bold lg:text-6xl">
           {price}
           {montly && <span className="text-sm">/month</span>}
         </span>

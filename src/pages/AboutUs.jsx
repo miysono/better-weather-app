@@ -53,7 +53,7 @@ export default function AboutUs() {
           <Link to="/login">
             <Button
               className={
-                "w-96 inline-block px-5 py-3 duration-500 font-semibold text-center rounded-2xl hover:text-blue-400 border-gray-800 hover:bg-gray-800 border-2 text-xl "
+                "inline-block px-5 py-3 duration-500 font-semibold text-center rounded-2xl hover:text-blue-400 border-gray-800 hover:bg-gray-800 border-2 lg:text-xl lg:w-96 "
               }
               type="button"
             >

@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
 import { useInView } from "react-intersection-observer";
-import Button from "../Button";
 
 export default function HomepageDescription() {
   const { ref, inView } = useInView({ threshold: 0 });
@@ -47,14 +46,10 @@ export default function HomepageDescription() {
               on your screen. With a single tap, it conjures up the very essence
               of weather, transforming your device into a window to the cosmos.
             </h1>
-            <div className="mt-20 relative lg:mt-5">
+            <div className="my-5 relative lg:mt-5">
               <NavLink to="/login">
-                <div className=" hover:bg-blue-500 border-blue-500 border-2 rounded-xl relative">
-                  <Button>
-                    <p className="p-5 font-semibold lg:text-2xl">
-                      Register now!
-                    </p>
-                  </Button>
+                <div className=" hover:bg-blue-500 border-blue-400 border-2 rounded-xl relative">
+                  <p className="p-3 font-semibold lg:text-2xl">Register now!</p>
                 </div>
               </NavLink>
             </div>

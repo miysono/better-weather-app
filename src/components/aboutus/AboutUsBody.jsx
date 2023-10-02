@@ -1,7 +1,7 @@
 export default function AboutUsBody({ children }) {
   return (
     <main className="min-h-screen bg-blue-300">
-      <section className="py-10 text-gray-800 px-4">{children}</section>
+      <section className="py-10 text-gray-800 ">{children}</section>
     </main>
   );
 }

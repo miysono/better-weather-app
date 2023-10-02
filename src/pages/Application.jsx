@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import ApplicationOverlay from "../components/application/overlay/ApplicationOverlay";
 import ApplicationLayout from "../components/application/ApplicationLayout";
 import ApplicationMap from "../components/application/ApplicationMap";
