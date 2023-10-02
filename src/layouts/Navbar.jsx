@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import Button from "../components/Button";
 
 function Navbar({
   bg = "bg-blue-300",
@@ -54,12 +53,15 @@ function Navbar({
           </NavLink>
         </div>
 
-        <NavLink to="/login">
-          <div className="flex items-center">
-            <div className="p-4 hover:bg-blue-400 duration-300 rounded-b-xl">
-              <Button>Sign in</Button>
-            </div>
-          </div>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive
+              ? "p-4 bg-blue-400 duration-300 text-gray-800 rounded-b-xl"
+              : "p-4 hover:bg-blue-400 text-gray-800 duration-300 rounded-b-xl"
+          }
+        >
+          <p>Sign in</p>
         </NavLink>
       </header>
 

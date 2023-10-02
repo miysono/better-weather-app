@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export default function PricingCard({
   children,
   price,
@@ -21,16 +23,16 @@ export default function PricingCard({
       </div>
       <p className="mt-3 ">{description}</p>
       {children}
-      <button
-        type="button"
+      <NavLink
+        to="/login"
         className={`inline-block px-5 py-3 duration-500 font-semibold text-center rounded-2xl border-2 text-xl ${
           active
             ? "border-blue-400 hover:bg-blue-400 hover:text-gray-800"
             : "border-gray-800 hover:bg-gray-800 hover:text-blue-400"
         } `}
       >
-        Get Started
-      </button>
+        <button> Get Started</button>
+      </NavLink>
     </div>
   );
 }

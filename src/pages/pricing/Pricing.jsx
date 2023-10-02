@@ -3,7 +3,6 @@ import Navbar from "/src/layouts/Navbar";
 import PageHeader from "/src/components/PageHeader";
 import PageBody from "/src/components/PageBody";
 
-import CardsContainer from "./components/CardsContainer";
 import PricingCard from "./components/PricingCard";
 import PricingFeatureList from "./components/PricingFeatureList";
 
@@ -16,7 +15,7 @@ export default function Pricing() {
         {/* Header */}
         <PageHeader title="Choose your best plan" subtitle="Pricing" />
         {/* Cards */}
-        <CardsContainer>
+        <div className="flex flex-col lg:flex-row justify-center px-5 w-full gap-10">
           {/* Card 1 */}
           <PricingCard
             title="Basic"
@@ -64,7 +63,7 @@ export default function Pricing() {
               ]}
             />
           </PricingCard>
-        </CardsContainer>
+        </div>
       </PageBody>
       {/* Footer */}
       <Footer />

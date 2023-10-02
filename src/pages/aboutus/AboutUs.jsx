@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import Navbar from "/src/layouts/Navbar";
 import Footer from "/src/layouts/Footer";
@@ -15,7 +15,7 @@ export default function AboutUs() {
       <Navbar />
       <PageBody>
         {/* Title */}
-        <PageHeader title={"Who are we?"} subtitle={"About us"} />
+        <PageHeader title="Who are we?" subtitle="About us" />
 
         {/* Body */}
         <div className="relative px-5 flex justify-center items-center flex-col">
@@ -59,17 +59,11 @@ export default function AboutUs() {
           />
 
           {/* CTA */}
-          <Link to="/login">
-            <Button
-              className={
-                "inline-block px-5 py-3 duration-500 font-semibold text-center rounded-2xl hover:text-blue-400 border-gray-800 hover:bg-gray-800 border-2 lg:text-xl lg:w-96 "
-              }
-              type="button"
-            >
-              {" "}
-              Get Started
-            </Button>
-          </Link>
+          <div className="mt-10">
+            <NavLink to="/login">
+              <Button>Get Started!</Button>
+            </NavLink>
+          </div>
         </div>
       </PageBody>
       {/* Footer */}
