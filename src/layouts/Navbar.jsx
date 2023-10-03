@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../contexts/AuthContext";
 
 function Navbar({
   bg = "bg-blue-300",
@@ -7,6 +8,7 @@ function Navbar({
   logoBlue = false,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { isLoggedIn } = useAuth();
   return (
     <>
       {/* DESKTOP HEADER */}
@@ -53,16 +55,29 @@ function Navbar({
           </NavLink>
         </div>
 
-        <NavLink
-          to="/login"
-          className={({ isActive }) =>
-            isActive
-              ? "p-4 bg-blue-400 duration-300 text-gray-800 rounded-b-xl"
-              : "p-4 hover:bg-blue-400 text-gray-800 duration-300 rounded-b-xl"
-          }
-        >
-          <p>Sign in</p>
-        </NavLink>
+        {isLoggedIn ? (
+          <NavLink
+            to="/app"
+            className={({ isActive }) =>
+              isActive
+                ? "p-4 bg-blue-400 duration-300 text-gray-800 rounded-b-xl"
+                : "p-4 hover:bg-blue-400 text-gray-800 duration-300 rounded-b-xl"
+            }
+          >
+            <p>Go to app!</p>
+          </NavLink>
+        ) : (
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive
+                ? "p-4 bg-blue-400 duration-300 text-gray-800 rounded-b-xl"
+                : "p-4 hover:bg-blue-400 text-gray-800 duration-300 rounded-b-xl"
+            }
+          >
+            <p>Sign in</p>
+          </NavLink>
+        )}
       </header>
 
       {/* MOBILE HEADER */}
@@ -142,16 +157,29 @@ function Navbar({
                 >
                   <li>About us</li>
                 </NavLink>
-                <NavLink
-                  to="/login"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-blue-400 p-5 rounded-l-xl ml-10 text-gray-900"
-                      : "px-5 py-5"
-                  }
-                >
-                  <li>Sign in</li>
-                </NavLink>
+                {isLoggedIn ? (
+                  <NavLink
+                    to="/login"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "bg-blue-400 p-5 rounded-l-xl ml-10 text-gray-900"
+                        : "px-5 py-5"
+                    }
+                  >
+                    <li>Go to app!</li>
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    to="/login"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "bg-blue-400 p-5 rounded-l-xl ml-10 text-gray-900"
+                        : "px-5 py-5"
+                    }
+                  >
+                    <li>Sign in</li>
+                  </NavLink>
+                )}
               </ul>
             )}
           </div>

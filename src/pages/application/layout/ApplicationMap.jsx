@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
-import { useLayoutContext } from "../../hooks/useLayoutContext";
+import { useLayoutContext } from "/src/hooks/useLayoutContext";
 
 export default function ApplicationMap() {
   const [mapPosition] = useState([40, 0]);

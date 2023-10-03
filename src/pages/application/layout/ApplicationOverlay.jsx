@@ -1,9 +1,22 @@
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
+
 export default function ApplicationOverlay() {
+  const { username, userSignOut } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogOut = async () => {
+    await userSignOut();
+    navigate("/");
+  };
   return (
     <>
       <div className="w-72 absolute font-semibold text-blue-400 flex justify-between top-5 right-1/2 translate-x-1/2 bg-gray-800 rounded-xl">
-        <p className="p-3 text-center">Welcome back, user!</p>
-        <button className="rounded-xl px-2 border-2 duration-300 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-800">
+        <p className="p-3 text-center">Welcome back!</p>
+        <button
+          onClick={handleLogOut}
+          className="rounded-xl px-2 border-2 duration-300 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-800"
+        >
           Log out
         </button>
       </div>

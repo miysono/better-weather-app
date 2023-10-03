@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useUrlPosition } from "../../../../hooks/useUrlPosition";
-import { useWeatherContext } from "../../../../hooks/useWeatherContext";
+import { useUrlPosition } from "/src/hooks/useUrlPosition";
+import { useWeatherContext } from "/src/hooks/useWeatherContext";
 
 import Spinner from "/src/components/Spinner";
 import LayoutIntro from "../LayoutIntro";

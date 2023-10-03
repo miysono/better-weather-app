@@ -1,7 +1,7 @@
-import LayoutHeader from "./layout/LayoutHeader";
-import LayoutBody from "./layout/LayoutBody";
-import LayoutForecastOptions from "./layout/LayoutForecastOptions";
-import LayoutForecastOption from "./layout/LayoutForecastOption";
+import LayoutHeader from "../components/LayoutHeader";
+import LayoutBody from "../components/LayoutBody";
+import LayoutForecastOptions from "../components/LayoutForecastOptions";
+import LayoutForecastOption from "../components/LayoutForecastOption";
 
 import { Outlet } from "react-router-dom";
 
