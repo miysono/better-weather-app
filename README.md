@@ -1,7 +1,5 @@
 # A complete React Weather App with TailwindCSS and Firebase
 
-# A complete Weather Application created with React and styled with Tailwind.
-
 ![homepage](https://github.com/miysono/complete-react-weather-app/assets/108880675/dbe8cd2d-04f3-40d2-9659-f3b9ca7a859b)
 ![pricingpage](https://github.com/miysono/complete-react-weather-app/assets/108880675/59edbdbe-49e2-4463-92a9-cb7dc30462d2)
 
