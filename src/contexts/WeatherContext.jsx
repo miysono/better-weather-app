@@ -1,10 +1,5 @@
 import { createContext, useCallback, useReducer } from "react";
 
-const BASE_LOCATION_URL =
-  "https://api.bigdatacloud.net/data/reverse-geocode-client";
-const BASE_REALTIME_URL = "https://api.openweathermap.org/data/2.5/weather";
-const BASE_FIVEDAY_URL = "https://api.openweathermap.org/data/2.5/forecast";
-const WEATHER_KEY = "c4377e1d554c504fc7b74990072f97b3";
 
 const WeatherContext = createContext();
 
